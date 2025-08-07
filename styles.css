@@ -1,211 +1,79 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-.gradient{
-    font-size: 5rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: linear-gradient(to right, rgb(67, 124, 205), rgb(69, 214, 202));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-body{
-    /* background-color: rgb(30, 30, 30); */
-    background-color: #fff;
-}
+/* Tipografía moderna y limpia */
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-  }
-  
-  header {
-    background-color: #333;
-    color: #fff;
-    padding: 20px;
-  }
-
-  .box{
-    background: linear-gradient(to bottom,rgb(67, 124, 205), rgb(69, 214, 202));
-    box-shadow: 0px 10px 50px 0px rgba(0, 0, 0, 0.5);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 15rem;
-    width: 24rem;
-    padding-top: 1rem;
-    border-radius: 1.5rem;
-  }
- 
-  .centered_container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  /*navbar  */
-
-.logo{
-  display: flex;
-  pointer-events: none;
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  background-color: #f7f9fc;
+  color: #1e293b;
 }
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: "Poppins", sans-serif;
-  }
-  
-  .container {
-    max-width: 100vw;
-    width: 95%;
-    margin: 0;
-  }
-  
-  .navbar {
-    width: 100%;
-    box-shadow: 0 1px 4px rgb(146 161 176 / 15%);
-  }
-  
-  .nav-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 62px;
-  }
-  
-  .navbar .menu-items {
-    display: flex;
-  }
-  
-  .navbar .nav-container li {
-    list-style: none;
-  }
-  
-  .navbar .nav-container a {
-    text-decoration: none;
-    color: #0e2431;
-    font-weight: 500;
-    font-size: 1.2rem;
-    padding: 0.7rem;
-  }
-  
-  .navbar .nav-container a:hover{
-      font-weight: bolder;
-  }
-  
-  .nav-container {
-    display: block;
-    position: relative;
-    height: 60px;
-  }
-  
-  .nav-container .checkbox {
-    position: absolute;
-    display: block;
-    height: 32px;
-    width: 32px;
-    top: 20px;
-    left: 20px;
-    z-index: 5;
-    opacity: 0;
-    cursor: pointer;
-  }
-  
-  .nav-container .hamburger-lines {
-    display: block;
-    height: 26px;
-    width: 32px;
-    position: absolute;
-    top: 17px;
-    left: 20px;
-    z-index: 2;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
-  
-  .nav-container .hamburger-lines .line {
-    display: block;
-    height: 4px;
-    width: 100%;
-    border-radius: 10px;
-    background: #0e2431;
-  }
-  
-  .nav-container .hamburger-lines .line1 {
-    transform-origin: 0% 0%;
-    transition: transform 0.4s ease-in-out;
-  }
-  
-  .nav-container .hamburger-lines .line2 {
-    transition: transform 0.2s ease-in-out;
-  }
-  
-  .nav-container .hamburger-lines .line3 {
-    transform-origin: 0% 100%;
-    transition: transform 0.4s ease-in-out;
-  }
-  
-  .navbar .menu-items {
-    padding-top: 120px;
-    box-shadow: inset 0 0 2000px rgba(255, 255, 255);
-    height: 100vh;
-    width: 100%;
-    transform: translate(-150%);
-    display: flex;
-    flex-direction: column;
-    margin-left: -40px;
-    padding-left: 50px;
-    transition: transform 0.5s ease-in-out;
-    text-align: center;
-    background-color: white;
-  }
-  
-  .navbar .menu-items li {
-    margin-bottom: 1.2rem;
-    font-size: 1.5rem;
-    font-weight: 500;
-  }
-  
-  .logo {
 
-    position: absolute;
-    top: 5px;
-    right: 15px;
-    font-size: 1.2rem;
-    color: #0e2431;
-  }
-  
-  .nav-container input[type="checkbox"]:checked ~ .menu-items {
-    transform: translateX(0);
-  }
-  
-  .nav-container input[type="checkbox"]:checked ~ .hamburger-lines .line1 {
-    transform: rotate(45deg);
-  }
-  
-  .nav-container input[type="checkbox"]:checked ~ .hamburger-lines .line2 {
-    transform: scaleY(0);
-  }
-  
-  .nav-container input[type="checkbox"]:checked ~ .hamburger-lines .line3 {
-    transform: rotate(-45deg);
-  }
-  
-  /* .nav-container input[type="checkbox"]:checked ~ .logo{ */
-    /* display: none; */
-  /* } */
-  .nav-container input[type="checkbox"]:checked ~ .logo {
-    opacity: 0; /* Establece la opacidad inicial como 0 */
-    animation: fadeOut 0.3s ease; /* Aplica una animación de desvanecimiento */
-  }
-  
-  @keyframes fadeOut {
-    from { opacity: 1; } /* Estado inicial de la animación */
-    to { opacity: 0; } /* Estado final de la animación */
-  }
-  
-  
+/* Encabezado más plano y moderno */
+header {
+  background-color: #1e3a8a;
+  color: white;
+  padding: 4rem 1rem;
+  text-align: center;
+}
+
+h1 {
+  font-size: 2.8rem;
+  margin: 0 0 1rem;
+}
+
+h2 {
+  font-size: 1.8rem;
+  color: #1e3a8a;
+  border-left: 4px solid #3b82f6;
+  padding-left: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+/* Contenedor principal */
+.container {
+  max-width: 960px;
+  margin: auto;
+  padding: 2rem 1rem;
+}
+
+/* Secciones limpias y espaciosas */
+section {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  border: 1px solid #e2e8f0;
+}
+
+/* Imágenes centradas, proporcionales y no tan grandes */
+.section-image {
+  display: block;
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+  max-width: 500px;
+  margin: 1rem auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+
+/* Lista limpia */
+ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+  margin: 0;
+}
+
+ul li {
+  margin-bottom: 0.6rem;
+}
+
+/* Pie de página más ligero */
+footer {
+  text-align: center;
+  padding: 2rem 1rem;
+  background-color: #e0e7ff;
+  color: #334155;
+  font-size: 0.9rem;
+}
